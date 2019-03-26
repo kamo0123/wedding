@@ -1,0 +1,900 @@
+@import url('https://fonts.googleapis.com/css?family=Dancing+Script');
+
+/* MASHVP */
+
+* {
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+}
+html,body { height: 100%; }
+.mobile-fix-br { display: none; }
+body {
+    font-weight: 500;
+}
+a {
+    color: #222;
+}
+/* HEADER */
+.header-nav {
+    padding: 3% 0 0 3%
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+}
+.header-nav-menu {
+    margin: 0 2%;
+    z-index: 9999;
+}
+.header-nav-menu a {
+    color: #fff;
+}
+/*all*/
+
+
+/*top*/
+/*title*/
+#title {
+    font-family: 'Dancing Script', cursive;
+}
+.right-news-title, .right-news-title-p, .right-news, .right-news-p, .right-contact-p {
+    position: absolute;
+    top: 10%;
+    right: 4%;
+    height: 100%;
+    width: 100%;
+    text-align: right;
+}
+.right-news-title {
+    font-size: 110%;
+    top: -100%;
+}
+.right-news-title-p {
+    top: 100%;
+    font-size: 50%;
+    margin: 0;
+    line-height: 300%;
+}
+.right-news {
+    color: #d0e8f3;
+    margin-right: 5%;
+}
+.right-news-p {
+    top: 100%;
+    color: #d0e8f3;
+    font-size: 50%;
+    margin-right: 5%;
+}
+.right-contact-p {
+    line-height: 20px;
+    top: 70%;
+    color: #d0e8f3;
+    font-size: 50%;
+    margin-right: 5%;
+    text-align: right;
+}
+/*title*/
+.right-news-01, .right-news-02, .right-news-03, .right-news-04, .right-about-01, .right-about-02, .right-about-03, .right-about-04, .right-plan-01, .right-plan-02, .right-access-01, .right-access-02, .right-access-03, .right-access-04, .right-access-05, .right-access-06, .right-access-07, .right-access-08 {
+    font-size: 90%;
+    text-align: right;
+}
+.right-news-01, .right-news-02, .right-news-03, .right-news-p-03 {
+    margin: 0;
+    color: #333;
+    text-align: right;
+}
+.right-news-p-01 a, .right-news-p-02 a, .right-news-p-03 a {
+    color: #d0e8f3;
+    display: contents;
+    position: absolute;
+    top: 50%;
+}
+.right-news-p-01, .right-news-p-02 {
+    position: absolute;
+    right: 1%;
+    text-align: right;
+}
+.right-news-p-02 {
+    right: 1%;
+}
+.right-news-p-03 {
+    position: absolute;
+    right: 1%;
+    text-align: right;
+}
+.right-news-p-01 a, .right-news-p-02 a, .right-news-p-03, .right-news-04-p, .right-about-p-01, .right-about-p-02, .right-about-p-03, .right-about-p-04, .right-access-p-01, .right-access-p-02, .right-access-p-03, .right-access-p-04, .right-access-p-05, .right-access-p-06, .right-access-p-07, .right-access-p-08 {
+    font-size: 50%;
+    margin: 0;
+    text-align: right;
+}
+.right-about-p-01, .right-about-p-02, .right-about-p-03, .right-about-p-04 {
+    line-height: 25px;
+}
+.right-news-04-video {
+    margin: 0 0 0 5%;
+    height: 500px;
+}
+/*about*/
+.right-about-01, .right-about-02, .right-about-03, .right-about-04 {
+    margin: 5% 0 0 0;
+}
+
+/*right-content*/
+#right-content-news {
+    position: absolute;
+    top: 3%;
+    right: 5%;
+    width: 2000px;
+    background-color: #fff;
+}
+.plan {
+    background-color: #fff;
+    font-size: 80%;
+    text-align: right;
+    position: absolute;
+    top: 30%;
+    right: 10%;
+    height: 50%;
+    width: 70%;
+}
+.right-plan-01, .right-plan-02, .right-plan-03 {
+    margin: 10% 5% 0 0;
+}
+.right-plan-p-01, .right-plan-p-02, .right-plan-p-03 {
+    margin: 10% 5% 0 0;
+    font-size: 50%;
+}
+.access {
+    background-color: #d0e8f3;
+    width: 90%;
+    position: absolute;
+    right: 5%;
+}
+.right-access-01 {
+    margin-bottom: 5%;
+}
+    .privacy a {
+        margin-right: 3%;
+        font-size: 30%;
+        position: absolute;
+        right: 2%;
+    }
+
+/*top*/
+/*contact*/
+.right-contact-01 {
+    position: absolute;
+    top: 10%;
+    right: 4%;
+    color: #333;
+    margin-right: 5%;
+    text-align: right;
+    font-size: 50%;
+    width: 800px;
+    line-height: 20px;
+}
+.form {
+    font-size: 70%;
+    line-height: 25px;
+    text-align: right;
+    margin: 5% 0 0 0;
+}
+.form:first-child {
+    margin: 15% 0 0 0;
+}
+input[type="submit"] {
+    width: 25%;
+  position: relative;
+  display: inline-block;
+  padding: 0.5% 2%;
+  border: 2px solid #d0e8f3;
+  border-radius: 5px;
+  background-color: #d0e8f3;
+  text-align: center;
+  text-decoration: none;
+  transition: .3s;
+  margin: 0 0.5%;
+}
+input[type="text"], input[type="tel"], input[type="email"] {
+    width: 70%;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    border:solid 1px #d0e8f3;
+    text-align: right;
+}
+textarea {
+    width: 80%;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    border: solid 1px #d0e8f3;
+    text-align: right;
+}
+input[type="text"]:focus, input[type="tel"]:focus, input[type="email"]:focus, input[type="submit"], textarea:focus {
+    background-color: #d0e8f3;
+}
+
+/*contact*/
+@media(min-width: 1025px) {
+
+    nav a:hover div { width: 100%; } }
+
+ nav a.b-tarifs div { width: 100%; }
+
+
+@media (min-width: 1025px) {
+    a.call-to-action.small.dark:hover:before {
+        content: '';
+        -webkit-transform: scale(1,1);
+        -ms-transform: scale(1,1);
+        transform: scale(1,1);
+    }
+}
+
+/* ACCUEIL */
+
+.sub-title { color: #fff; }
+
+.block {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.color-box01 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #d0e8f3;
+    opacity: 0.5;
+    width: 50%;
+    height: 100%;
+    z-index: 998;
+}
+.color-box02 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #d0e8f3;
+    opacity: 0.5;
+    width: 50%;
+    height: 100%;
+    z-index: 998;
+}
+.color-box03 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #d0e8f3;
+    opacity: 0.5;
+    width: 50%;
+    height: 100%;
+    z-index: 998;
+}
+.color-box04 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #d0e8f3;
+    opacity: 0.5;
+    width: 50%;
+    height: 100%;
+    z-index: 998;
+}
+.color-box05 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #d0e8f3;
+    opacity: 0.5;
+    width: 50%;
+    height: 100%;
+    z-index: 998;
+}
+
+
+.autres-services a:hover {
+    text-decoration: none;
+}
+#hero {
+    position: absolute;
+    width: 95%;
+    height: 92.5%;
+    padding: 50px;
+    margin: 2% 0 0 2.5%;
+    overflow: hidden;
+    background: url(../images/hero.JPG) 50% 50% no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    transform: matrix(1, 0, 0, 1, 0, 0);
+}
+#hero > div {
+    width: 100%;
+    height: 100%;
+}
+.hero01 {
+    position: absolute;
+    width: 95%;
+    height: 95%;
+    padding: 50px;
+    margin: 2.5% 0 0 2.5%;
+    overflow: hidden;
+    background: url(../images/239_R.JPG) 50% 50% no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    transform: matrix(1, 0, 0, 1, 0, 0);
+}
+.hero02 {
+    position: absolute;
+    width: 95%;
+    height: 95%;
+    padding: 50px;
+    margin: 2.5% 0 0 2.5%;
+    overflow: hidden;
+    background: url(../images/top04.jpg) 50% 50% no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    transform: matrix(1, 0, 0, 1, 0, 0);
+}
+.hero03 {
+    position: absolute;
+    width: 95%;
+    height: 95%;
+    padding: 50px;
+    margin: 2.5% 0 0 2.5%;
+    overflow: hidden;
+    background: url(../images/top03.JPG) 50% 50% no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    transform: matrix(1, 0, 0, 1, 0, 0);
+}
+/*about*/
+#about-hero {
+    position: absolute;
+    width: 95%;
+    height: 92.5%;
+    padding: 50px;
+    margin: 2% 0 0 2.5%;
+    overflow: hidden;
+    background: url(../images/about05.jpg) 50% 50% no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    transform: matrix(1, 0, 0, 1, 0, 0);
+}
+#about-hero > div {
+    width: 100%;
+    height: 100%;
+}
+.about01 {
+    position: absolute;
+    top: 2.5%;
+    width: 95%;
+    height: 95%;
+    padding: 50px;
+    margin: 2.5% 0 0 2.5%;
+    overflow: hidden;
+    background: url(../images/access.png) 50% 50% no-repeat;
+    opacity: 0.8;
+    background-size: cover;
+    background-attachment: fixed;
+    transform: matrix(1, 0, 0, 1, 0, 0);
+}
+.about02 {
+    position: absolute;
+    top: 2.5%;
+    width: 95%;
+    height: 95%;
+    padding: 50px;
+    margin: 2.5% 0 0 2.5%;
+    overflow: hidden;
+    background: url(../images/about02.png) 50% 50% no-repeat;
+    opacity: 0.8;
+    background-size: cover;
+    background-attachment: fixed;
+    transform: matrix(1, 0, 0, 1, 0, 0);
+}
+.about03 {
+    position: absolute;
+    top: 2.5%;
+    width: 95%;
+    height: 95%;
+    padding: 50px;
+    margin: 2.5% 0 0 2.5%;
+    overflow: hidden;
+    background: url(../images/about06.png) 50% 50% no-repeat;
+    opacity: 0.8;
+    background-size: cover;
+    background-attachment: fixed;
+    transform: matrix(1, 0, 0, 1, 0, 0);
+}
+.about04 {
+    position: absolute;
+    top: 2.5%;
+    width: 95%;
+    height: 95%;
+    padding: 50px;
+    margin: 2.5% 0 0 2.5%;
+    overflow: hidden;
+    background: url(../images/about04.jpg) 50% 50% no-repeat;
+    opacity: 0.8;
+    background-size: cover;
+    background-attachment: fixed;
+    transform: matrix(1, 0, 0, 1, 0, 0);
+}
+/*plan*/
+#plan-hero {
+    position: absolute;
+    width: 95%;
+    height: 92.5%;
+    padding: 50px;
+    margin: 2% 0 0 2.5%;
+    overflow: hidden;
+    background: url(../images/plan06.jpg) 50% 50% no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    transform: matrix(1, 0, 0, 1, 0, 0);
+}
+#plan-hero > div {
+    width: 100%;
+    height: 100%;
+}
+.plan01 {
+    position: absolute;
+    top: 2.5%;
+    width: 95%;
+    height: 95%;
+    padding: 50px;
+    margin: 2.5% 0 0 2.5%;
+    overflow: hidden;
+    background: url(../images/plan01.jpg) 50% 50% no-repeat;
+    opacity: 0.8;
+    background-size: cover;
+    background-attachment: fixed;
+    transform: matrix(1, 0, 0, 1, 0, 0);
+}
+.plan02 {
+    position: absolute;
+    top: 2.5%;
+    width: 95%;
+    height: 95%;
+    padding: 50px;
+    margin: 2.5% 0 0 2.5%;
+    overflow: hidden;
+    background: url(../images/plan07.jpg) 50% 50% no-repeat;
+    opacity: 0.8;
+    background-size: cover;
+    background-attachment: fixed;
+    transform: matrix(1, 0, 0, 1, 0, 0);
+}
+.plan03 {
+    position: absolute;
+    top: 2.5%;
+    width: 95%;
+    height: 95%;
+    padding: 50px;
+    margin: 2.5% 0 0 2.5%;
+    overflow: hidden;
+    background: url(../images/plan03.jpeg) 50% 50% no-repeat;
+    opacity: 0.8;
+    background-size: cover;
+    background-attachment: fixed;
+    transform: matrix(1, 0, 0, 1, 0, 0);
+}
+/*access*/
+#access-hero {
+    position: absolute;
+    width: 95%;
+    height: 92.5%;
+    padding: 50px;
+    margin: 2% 0 0 2.5%;
+    overflow: hidden;
+    background: url(../images/access02.jpg) 50% 50% no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    transform: matrix(1, 0, 0, 1, 0, 0);
+}
+#access-hero > div {
+    width: 100%;
+    height: 100%;
+}
+.access01 {
+    position: absolute;
+    top: 2.5%;
+    left: 1%;
+    width: 48%;
+    height: 50%;
+    padding: 10px;
+    margin: 0 auto;
+    overflow: hidden;
+    opacity: 0.7;
+    background-size: cover;
+    background-attachment: fixed;
+    transform: matrix(1, 0, 0, 1, 0, 0);
+    z-index: 10000;
+    border: 1px dotted #fff;
+    border-radius: 10px;
+}
+/*contact*/
+#contact-hero {
+    position: absolute;
+    width: 95%;
+    height: 92.5%;
+    padding: 50px;
+    margin: 2% 0 0 2.5%;
+    overflow: hidden;
+    background: url(../images/contact02.png) 50% 50% no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    transform: matrix(1, 0, 0, 1, 0, 0);
+}
+#contact-hero > div {
+    width: 100%;
+    height: 100%;
+}
+.contact01 {
+    position: absolute;
+    top: 2.5%;
+    width: 95%;
+    height: 95%;
+    padding: 50px;
+    margin: 2.5% 0 0 2.5%;
+    overflow: hidden;
+    background: url(../images/contact01.jpg) 50% 50% no-repeat;
+    opacity: 0.5;
+    background-size: cover;
+    background-attachment: fixed;
+    transform: matrix(1, 0, 0, 1, 0, 0);
+}
+
+#error {
+    position: absolute;
+    width: 95%;
+    height: 92.5%;
+    padding: 50px;
+    margin: 2% 0 0 2.5%;
+    overflow: hidden;
+    background: url(../images/error.png) 50% 50% no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    transform: matrix(1, 0, 0, 1, 0, 0);
+}
+#right-content-error {
+    position: absolute;
+    top: 480%;
+    right: 8%;
+}
+
+
+#title {
+    position: absolute;
+    bottom: 20%;
+    width: 50%;
+    left: 0;
+    padding: 100px;
+    z-index: 999;
+}
+#title p {
+    margin: 30px 0 0 0;
+}
+#title img.logo-title { width: 180px; }
+#title p.sub-title {
+    font-size: 20pt;
+    line-height: 24pt;
+}
+#title p.sub-title small {
+    font-size: 10pt;
+    line-height: 14pt;
+}
+.inner {
+    position: absolute;
+    width: 50%;
+    padding: 5% 5% 0 0;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    font-size: 26pt;
+    line-height: 30pt;
+}
+.color-box + .inner { color: #fff; }
+.inner.right {
+    position: absolute;
+    left: 50%;
+    width: 50%;
+}
+h2 {
+    font-size: 26pt;
+    line-height: 24pt;
+}
+/* FOOTER */
+footer {
+    margin-top: 15%;
+    color: #999;
+    text-align: center;
+}
+footer a {
+    color: #999;
+}
+.inner-right-service ul {
+    font-weight: 300;
+    font-size: 11pt;
+    list-style-image: url('img/bullet-point.svg');
+    margin: 20px 0 20px 15px;
+}
+.inner-right-service ul li {
+}
+.inner-right-service h2 {
+    margin: 20px 0 10px 0;
+    font-size: 20pt;
+}
+.inner-right-service h2:first-child {
+    margin-top: 0px;
+}
+/* TABLETTE PORTRAIT */
+@media (min-width: 767px) and (max-width: 1024px) {
+    #title { padding: 30px; }
+    .inner { padding: 30px; }
+    .home a.call-to-action { display: inline-blockk; top: 20px; left: 0; padding: 10px 20px 10px 20px; }
+    .height700px { height: 300px; }
+
+    .page-template-tarifs .color-box { width: 100%; }
+    .page-template-tarifs #titre-tarifs { width: 100%; }
+    .page-template-tarifs .inner-tarif { width: 100%; }
+
+    .page-template-contact .color-box { width: 100%;  }
+    .page-template-contact h1 { width: 100%; display: none; }
+    .page-template-contact .inner.right { position: relative; width: 100%; }
+
+    .inner-right-service { padding: 30px; }
+
+    #hero, .hero01, .hero02, .hero03, #about-hero, .about01, .about02, .about03, #plan-hero, .plan01, .plan02, .plan03, #access-hero, #contact-hero {
+        background-size: contain;
+    }
+    .inner.right {
+        width: 100%;
+        left: 0;
+    }
+    .right-news-04, .right-news-04-p, .right-news-04-video {
+        margin-right: 5%;
+        margin-left: 0;
+    }
+    .color-box01 {
+        height: 100%;
+    }
+    .right-access-01, .right-access-02, .right-access-03, .right-access-04, .right-access-05, .right-access-06, .right-access-07, .right-access-08 {
+        font-size: 50%;
+
+    }
+    .right-access-p-01, .right-access-p-02, .right-access-p-03, .right-access-p-04, .right-access-p-05, .right-access-p-06, .right-access-p-07, .right-access-p-08, .right-plan-p-01, .right-plan-p-02, .right-plan-p-03 {
+        font-size: 40%;
+        text-align: right;
+    }
+    .right-contact-01 {
+        top: 5%;
+        right: 1%;
+        margin-right: 1%;
+        font-size: 70%;
+    }
+    .right-news-01, .right-news-02, .right-news-03, .right-news-04, .right-about-01, .right-about-02, .right-about-03, .right-about-04, .right-plan-01, .right-plan-02, .right-plan-03, .right-access-01, .right-contact-01, .privacy {
+        font-size: 75%;
+        text-align: right;
+        font-feature-settings: "palt" 1;
+    }
+    .right-news-01, .right-news-02, .right-news-03 {
+        position: absolute;
+        right: -1%;
+        background-color: #fff;
+    }
+    .right-news-p-01 a, .right-news-p-02 a, .right-news-p-03 a {
+        display: block;
+        width: 180px;
+        height: 100px;
+        top: 80px;
+        right: -10%;
+    }
+    .plan {
+        right: 15%;
+    }
+    .right-plan-01, .right-plan-02, .right-plan-03,.right-plan-p-01, .right-plan-p-02, .right-plan-p-03 {
+        text-align: center;
+        margin: 10% auto 0;
+    }
+    .access {
+        width: 100%;
+        display: block;
+        right: 0;
+        text-align: center;
+    }
+    .access01 {
+        top: 50%;
+        width: 100%;
+        display: block;
+    }
+    .right-access-01 {
+        text-align: center;
+    }
+    .right-access-p-01 {
+        text-align: center;
+    }
+    .right-contact-01 {
+        font-size: 55%;
+    }
+    .form {
+        text-align: left;
+    }
+}
+
+/* MOBILE */
+@media (max-width: 766px) {
+    .paddingTop0 {
+        padding-top: 100px;
+    }
+    #right-content {
+        padding: 200px 0 0px 0;
+        height: 400px;
+    }
+    #right-content > div {
+        padding: 40px 0 0 0;
+    }
+    .block.top { height: 100%; }
+    .color-box {
+        width: 0;
+        min-height: 100%;
+    }
+    /*all*/
+    .right-news, .right-news-p {
+        color: blue;
+    }
+    /*home*/
+    .header-nav {
+        display: table;
+        font-size: 80%;
+        line-height: 100%;
+    }
+    .header-nav li {
+        margin-bottom: 1%;
+    }
+    .right-news-title {
+        top: 40%;
+    }
+    .right-news-title-p {
+        width: 80%;
+    }
+    .right-news {
+        top: 70%;
+    }
+    .right-news-p {
+        top: 80%;
+    }
+    #right-content-news {
+        right: 0;
+        font-size: 50%;
+        top: 0;
+    }
+    .news {
+        margin-right: 0.5%;
+    }
+    .right-news-p-01, .right-news-p-02, .right-news-p-03 {
+        right: 1%;
+        color: #fff;
+    }
+    /*about*/
+    .about {
+        position: absolute;
+        top: 3%;
+        right: 3%;
+        color: #000;
+    }
+    .about01, .about02, .about03 {
+        opacity: 0.4;
+    }
+    .right-about-01, .right-about-02, .right-about-03 {
+        margin-bottom: 20%;
+    }
+    /* plan */
+    nav {
+        font-size: 16pt;
+        line-height: 24pt;
+    }
+    #right-content {
+        padding: 0;
+    }
+    #right-content .plan {
+        padding: 0;
+        height: 45%;
+        right: 15%;
+    }
+    .right-plan-01, .right-plan-02, .right-plan-03 {
+        margin: 7%;
+        text-align: center;
+    }
+    .right-plan-p-01, .right-plan-p-02, .right-plan-p-03 {
+        text-align: center;
+        line-height: 200%;
+        margin: 10%;
+        margin-right: 12%;
+    }
+    /*access*/
+
+    .access {
+        width: 100%;
+        display: block;
+        right: 0;
+        text-align: center;
+    }
+    .access01 {
+        top: 60%;
+        width: 100%;
+        display: block;
+    }
+    .right-access-p-01 {
+        padding-bottom: 10%;
+    }
+    /*contact*/
+    .right-contact-01 {
+        top: -10%;
+        right: 5%;
+        margin: 0;
+        width: 100%;
+    }
+    .form:first-child {
+        margin-top: 3%;
+    }
+    .form {
+        margin: 0;
+    }
+    #right-contact {
+        position: absolute;
+        right: 5%;
+        padding: 0;
+    }
+    textarea {
+        width: 100%;
+    }
+    input[type="submit"] {
+        width: 100%;
+    }
+
+    /* HP */
+    #hero {
+        padding: 10px;
+    }
+    #title {
+        width: 100%;
+        padding: 30px;
+    }
+    .inner {
+        position: relative;
+        width: 100%;
+        padding: 30px;
+        top: 0;
+        -webkit-transform: translateY(0);
+        -ms-transform: translateY(0);
+        transform: translateY(0);
+        font-size: 16pt;
+        line-height: 18pt;
+    }
+    .color-box + .inner { color: #000; }
+    .inner.right {
+        position: relative;
+        left: 0;
+        width: 100%;
+    }
+    /* FOOTER */
+    footer {
+        padding: 30px;
+        font-size: 9pt;
+        background: #f5f5f5;
+    }
+    .height700px { height: 300px; }d
+    .inner-right-service { font-size: 8pt; }
+
+    .page-template-tarifs .color-box { width: 100%; display: none; }
+    .page-template-tarifs #titre-tarifs { width: 100%; }
+    .page-template-tarifs .inner-tarif { width: 100%; }
+
+    .page-template-tarifs p { padding: 30px; }
+    }

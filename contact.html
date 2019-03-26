@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <title>CONTACT | 丘の上のウェディング</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/sanitize.css">
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    <script src="http://www.madame-de.net/wp-content/themes/madame-de/js/jquery-1.11.2.min.js"></script>
+    <script>
+    function mousemove(e) {
+        var str = "X座標：" + e.pageX + " Y座標：" + e.pageY;
+        document.getElementById("area1").innerText = str;
+    }
+    </script>
+    <script>
+    $(document).ready(function() {
+        $(window).mousemove(function() {
+            $('#txt1').val(event.clientX);
+            $('#txt2').val(event.clientY);
+        });
+    });
+    </script>
+    <script type="text/javascript">
+    <!--
+    //in addition to "random" can be set to any valid colour eg "#f0f" or "red"★下記の"random"の項目に色名を記述すると記述した色になる。このままでは虹色
+    var colour = "random";
+    var sparkles = 50;
+
+    /****************************
+     *  Tinkerbell Magic Sparkle *
+     *(c)2005-13 mf2fm web-design*
+     *  http://www.mf2fm.com/rv  *
+     * DON'T EDIT BELOW THIS BOX *
+     ****************************/
+    var x = ox = 400;
+    var y = oy = 300;
+    var swide = 800;
+    var shigh = 600;
+    var sleft = sdown = 0;
+    var tiny = new Array();
+    var star = new Array();
+    var starv = new Array();
+    var starx = new Array();
+    var stary = new Array();
+    var tinyx = new Array();
+    var tinyy = new Array();
+    var tinyv = new Array();
+
+    window.onload = function() {
+        if (document.getElementById) {
+            var i, rats, rlef, rdow;
+            for (var i = 0; i < sparkles; i++) {
+                var rats = createDiv(3, 3);
+                rats.style.visibility = "hidden";
+                rats.style.zIndex = "999";
+                document.body.appendChild(tiny[i] = rats);
+                starv[i] = 0;
+                tinyv[i] = 0;
+                var rats = createDiv(5, 5);
+                rats.style.backgroundColor = "transparent";
+                rats.style.visibility = "hidden";
+                rats.style.zIndex = "999";
+                var rlef = createDiv(1, 5);
+                var rdow = createDiv(5, 1);
+                rats.appendChild(rlef);
+                rats.appendChild(rdow);
+                rlef.style.top = "2px";
+                rlef.style.left = "0px";
+                rdow.style.top = "0px";
+                rdow.style.left = "2px";
+                document.body.appendChild(star[i] = rats);
+            }
+            set_width();
+            sparkle();
+        }
+    }
+
+    function sparkle() {
+        var c;
+        if (Math.abs(x - ox) > 1 || Math.abs(y - oy) > 1) {
+            ox = x;
+            oy = y;
+            for (c = 0; c < sparkles; c++)
+                if (!starv[c]) {
+                    star[c].style.left = (starx[c] = x) + "px";
+                    star[c].style.top = (stary[c] = y + 1) + "px";
+                    star[c].style.clip = "rect(0px, 5px, 5px, 0px)";
+                    star[c].childNodes[0].style.backgroundColor = star[c].childNodes[1].style.backgroundColor = (colour == "random") ? newColour() : colour;
+                    star[c].style.visibility = "visible";
+                    starv[c] = 50;
+                    break;
+                }
+        }
+        for (c = 0; c < sparkles; c++) {
+            if (starv[c]) update_star(c);
+            if (tinyv[c]) update_tiny(c);
+        }
+        setTimeout("sparkle()", 40);
+    }
+
+    function update_star(i) {
+        if (--starv[i] == 25) star[i].style.clip = "rect(1px, 4px, 4px, 1px)";
+        if (starv[i]) {
+            stary[i] += 1 + Math.random() * 3;
+            starx[i] += (i % 5 - 2) / 5;
+            if (stary[i] < shigh + sdown) {
+                star[i].style.top = stary[i] + "px";
+                star[i].style.left = starx[i] + "px";
+            } else {
+                star[i].style.visibility = "hidden";
+                starv[i] = 0;
+                return;
+            }
+        } else {
+            tinyv[i] = 50;
+            tiny[i].style.top = (tinyy[i] = stary[i]) + "px";
+            tiny[i].style.left = (tinyx[i] = starx[i]) + "px";
+            tiny[i].style.width = "2px";
+            tiny[i].style.height = "2px";
+            tiny[i].style.backgroundColor = star[i].childNodes[0].style.backgroundColor;
+            star[i].style.visibility = "hidden";
+            tiny[i].style.visibility = "visible"
+        }
+    }
+
+    function update_tiny(i) {
+        if (--tinyv[i] == 25) {
+            tiny[i].style.width = "1px";
+            tiny[i].style.height = "1px";
+        }
+        if (tinyv[i]) {
+            tinyy[i] += 1 + Math.random() * 3;
+            tinyx[i] += (i % 5 - 2) / 5;
+            if (tinyy[i] < shigh + sdown) {
+                tiny[i].style.top = tinyy[i] + "px";
+                tiny[i].style.left = tinyx[i] + "px";
+            } else {
+                tiny[i].style.visibility = "hidden";
+                tinyv[i] = 0;
+                return;
+            }
+        } else tiny[i].style.visibility = "hidden";
+    }
+    document.onmousemove = mouse;
+
+    function mouse(e) {
+        if (e) {
+            y = e.pageY;
+            x = e.pageX;
+        } else {
+            set_scroll();
+            y = event.y + sdown;
+            x = event.x + sleft;
+        }
+    }
+    window.onscroll = set_scroll;
+
+    function set_scroll() {
+        if (typeof(self.pageYOffset) == 'number') {
+            sdown = self.pageYOffset;
+            sleft = self.pageXOffset;
+        } else if (document.body && (document.body.scrollTop || document.body.scrollLeft)) {
+            sdown = document.body.scrollTop;
+            sleft = document.body.scrollLeft;
+        } else if (document.documentElement && (document.documentElement.scrollTop || document.documentElement.scrollLeft)) {
+            sleft = document.documentElement.scrollLeft;
+            sdown = document.documentElement.scrollTop;
+        } else {
+            sdown = 0;
+            sleft = 0;
+        }
+    }
+    window.onresize = set_width;
+
+    function set_width() {
+        var sw_min = 999999;
+        var sh_min = 999999;
+        if (document.documentElement && document.documentElement.clientWidth) {
+            if (document.documentElement.clientWidth > 0) sw_min = document.documentElement.clientWidth;
+            if (document.documentElement.clientHeight > 0) sh_min = document.documentElement.clientHeight;
+        }
+        if (typeof(self.innerWidth) == 'number' && self.innerWidth) {
+            if (self.innerWidth > 0 && self.innerWidth < sw_min) sw_min = self.innerWidth;
+            if (self.innerHeight > 0 && self.innerHeight < sh_min) sh_min = self.innerHeight;
+        }
+        if (document.body.clientWidth) {
+            if (document.body.clientWidth > 0 && document.body.clientWidth < sw_min) sw_min = document.body.clientWidth;
+            if (document.body.clientHeight > 0 && document.body.clientHeight < sh_min) sh_min = document.body.clientHeight;
+        }
+        if (sw_min == 999999 || sh_min == 999999) {
+            sw_min = 800;
+            sh_min = 600;
+        }
+        swide = sw_min;
+        shigh = sh_min;
+    }
+
+    function createDiv(height, width) {
+        var div = document.createElement("div");
+        div.style.position = "absolute";
+        div.style.height = height + "px";
+        div.style.width = width + "px";
+        div.style.overflow = "hidden";
+        return (div);
+    }
+
+    function newColour() {
+        var c = new Array();
+        c[0] = 255;
+        c[1] = Math.floor(Math.random() * 256);
+        c[2] = Math.floor(Math.random() * (256 - c[1] / 2));
+        c.sort(function() { return (0.5 - Math.random()); });
+        return ("rgb(" + c[0] + ", " + c[1] + ", " + c[2] + ")");
+    }
+    // -->
+    </script>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul class="header-nav">
+                <li class="header-nav-menu"><a href="index.html">HOME</a></li>
+                <li class="header-nav-menu"><a href="about.html">ABOUT</a></li>
+                <li class="header-nav-menu"><a href="plan.html">PLAN</a></li>
+                <li class="header-nav-menu"><a href="access.html">ACCESS</a></li>
+                <li class="header-nav-menu"><a href="contact.html">CONTACT</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="block top">
+        <div id="contact-hero">
+            <div></div>
+            <!-- <div style="background: url(images/top04.png) 50% 50% / cover no-repeat; transform: matrix(1, 0, 0, 1, 0, 0);"></div> -->
+        </div>
+        <div class="color-box05"></div>
+        <div id="title">
+            <h1 class="title">Wedding on the hill</h1>
+            <p>丘の上にある小さな洋館<br>素敵な時間をお楽しみください</p>
+            <p class="sub-title">
+                “ A small<br>Western-style<br>building<br>on the hill<br>Enjoy a<br>nice time ” <small>in Japan</small><br>
+                <small style="color: #000">↓</small>
+            </p>
+        </div>
+    </div>
+    <div id="title-2" class="block">
+        <div class="inner right">
+            <div id="right-content">
+                <div class="contact-title">
+                    <h2 class="right-news">CONTACT</h2>
+                    <p class="right-news-p">丘の上のウェディング ~見学予約受付~</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="title-3" class="block">
+        <div class="contact01"></div>
+        <div class="inner right" style="height: 100%">
+            <div id="right-contact">
+                <h3 class="right-contact-01">以下のフォームに必要事項を入力して,「確認画面へ」ボタンを押してください。</h3>
+                <form action="">
+                    <p class="form">
+                        お名前<br><input type="text" name="name" required>
+                    </p>
+                    <p class="form">
+                        ふりがな<br><input type="text" name="kana" required>
+                    </p>
+                    <p class="form">
+                        電話番号<br><input type="tel" name="tel" required>
+                    </p>
+                    <p class="form">
+                        メールアドレス<br><input type="email" name="mail" required>
+                    </p>
+                    <p class="form">
+                        ご希望日時<br><input type="text" name="date" required>
+                    </p>
+                    <p class="form">
+                        お問い合わせ内容<br><textarea name="contact" cols="30" rows="10"></textarea>
+                    </p>
+                    <p class="form"><input type="submit" value="確認画面へ"></p>
+                </form>
+                <p class="privacy"><small><a href="images/thankyou.png">個人情報等に関するプライバシーポリシー</a></small></p>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <small>
+            丘の上のウェディング &copy 2019 zetton Inc. All Rights Reserved
+        </small>
+    </footer>
+</body>
+
+</html>
